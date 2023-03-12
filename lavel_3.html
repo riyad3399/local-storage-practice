@@ -5,30 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lavel-3 local storage</title>
+    <!-- daisy ui and tailwind link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+  <section class="grid justify-center my-14">
     <div>
         <p>Name</p>
-        <input id="textField" type="text">
-        <button onclick="deleteValue()">Delete Name</button>
-        <button id="btn-send" onclick="setTheValue()">Send Name</button>
+        <input id="textField" type="text" placeholder="Name" class="input input-primary input-bordered input-sm w-full max-w-xs">
+        <div class="my-5">
+            <button onclick="deleteValue()" class="bg-orange-600 p-2 rounded-lg text-white hover:bg-red-700">Delete Name</button>
+        <button id="btn-send" onclick="setTheValue()" class="bg-blue-600 p-2 rounded-lg text-white hover:bg-green-800">Send Name</button>
+        </div>
     </div>
     <div>
         <p>Email</p>
-        <input id="emailField" type="email" placeholder="Email">
-        <button id="delete-email" onclick="deleteEmail()">Delete Email</button>
-        <button id="send-email" onclick="setTheEmail()">Send Email</button>
+        <input id="emailField" type="email" placeholder="Email" class="input input-primary input-bordered input-sm w-full max-w-xs">
+        <div class="my-5">
+            <button id="delete-email" onclick="deleteEmail()" class="bg-orange-600 p-2 rounded-lg text-white hover:bg-red-700">Delete Email</button>
+            <button id="send-email" onclick="setTheEmail()" class="bg-blue-600 p-2 rounded-lg text-white hover:bg-green-800">Send Email</button>
+        </div>
     </div>
     <div>
         <p>Message</p>
-        <input id="messageField" type="text" placeholder="Message">
-        <button onclick="deleteMessage()">Delete Message</button>
-        <button onclick="setMessage()">Send Message</button>
+        <input id="messageField" type="text" placeholder="Message" class="input input-bordered input-primary input-sm w-full max-w-xs">
+        <div class="my-5">
+            <button onclick="deleteMessage()" class="bg-orange-600 p-2 rounded-lg text-white hover:bg-red-700">Delete Message</button>
+        <button onclick="setMessage()" class="bg-blue-600 p-2 rounded-lg text-white hover:bg-green-800">Send Message</button>
+        </div>
     </div>
-    <div>
-        <p></p>
-        <button onclick="clearLocalStorage()">Reset</button>
+    <div class="my-5">
+        <button onclick="clearLocalStorage()" class="btn btn-outline btn-warning">Reset</button>
+        <button onclick="convertObject()" class="btn btn-outline btn-secondary">Send</button>
     </div>
+ </section>   
     <script src="js/lavel_3.js"></script>
 </body>
 </html>

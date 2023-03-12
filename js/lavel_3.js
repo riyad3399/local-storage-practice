@@ -41,3 +41,43 @@ const deleteMessage = () => {
 const clearLocalStorage = () => {
     localStorage.clear();
 }
+
+
+
+// send button function way 1
+
+// const convertObject = () => {
+//     let cart = {};
+//     let name = localStorage.getItem('name')
+//     let email = localStorage.getItem('email')
+//     let message = localStorage.getItem('message')
+//     cart = { name, email, message }
+//     localStorage.setItem('cart', JSON.stringify(cart))
+// }
+
+
+const convertObject = () => {
+    let cart = {};
+    let name = localStorage.getItem('name')
+    let email = localStorage.getItem('email')
+    let message = localStorage.getItem('message')
+    cart = { name, email, message };
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+
+
+
+
+
+//send button function way 2
+
+// const convertObject = () => {
+//     const arr = ['name', 'email', 'message'];
+//     let cart = {};
+//     for (const key of arr) {
+//         cart[key] = localStorage.getItem(key)
+//     }
+//     localStorage.setItem('cart', JSON.stringify(cart))
+    
+// }
