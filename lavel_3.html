@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lavel-3 local storage</title>
+</head>
+<body>
+    <div>
+        <p>Name</p>
+        <input id="textField" type="text">
+        <button onclick="deleteValue()">Delete Name</button>
+        <button id="btn-send" onclick="setTheValue()">Send Name</button>
+    </div>
+    <div>
+        <p>Email</p>
+        <input id="emailField" type="email" placeholder="Email">
+        <button id="delete-email" onclick="deleteEmail()">Delete Email</button>
+        <button id="send-email" onclick="setTheEmail()">Send Email</button>
+    </div>
+    <div>
+        <p>Message</p>
+        <input id="messageField" type="text" placeholder="Message">
+        <button onclick="deleteMessage()">Delete Message</button>
+        <button onclick="setMessage()">Send Message</button>
+    </div>
+    <div>
+        <p></p>
+        <button onclick="clearLocalStorage()">Reset</button>
+    </div>
+    <script src="js/lavel_3.js"></script>
+</body>
+</html>
